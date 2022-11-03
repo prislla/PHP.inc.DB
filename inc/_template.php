@@ -25,6 +25,7 @@ else                                        // Se o ano atual é o ano do site..
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title><?php echo $tag_title ?></title>
 </head>
 
@@ -33,7 +34,10 @@ else                                        // Se o ano atual é o ano do site..
     <div id="wrap">
 
         <header>
-            <h1 onclick="location.href='/'"><?php echo $site_name ?></h1>
+            <h1 onclick="location.href='/'"><?php echo $site_name ?>
+        <span><?php echo $site_slogan ?></span></h1>
+            <img class= "logo" src="/img/logo.jpg">
+            
         </header>
 
         <nav>

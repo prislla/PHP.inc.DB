@@ -14,6 +14,7 @@ $page_title = 'Erro 404';
 $page_content = <<<HTML
 
 <h2>Oooops!</h2>
+<img src="/img/erro404.jpg" width="300px" alt="Erro 404">
 <p>O conteúdo que você está tentando acessar não está disponível ou não existe...</p>
 
 HTML;

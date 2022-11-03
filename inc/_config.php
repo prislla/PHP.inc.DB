@@ -11,8 +11,8 @@ date_default_timezone_set('America/Sao_Paulo');
  **************************************/
 $page_title = '';                           // Título dinâmico da página:
 $page_content = '';                         // Conteúdo dinâmico da página:
-$site_name = 'PHP.inc.DB';                  // Nome do site:
-$site_slogan = 'Só um site dinâmico...';    // Slogan do site:
+$site_name = 'Costura Criativa';                  // Nome do site:
+$site_slogan = 'Criando e Costurando';    // Slogan do site:
 $tag_title = $site_name;                    // Formato da tag <title>:
 $site_year = 2022;                          // Ano de lançamento do site:
 $copyright = "&copy; {$site_year} ";        // Mensagem de Copyright no rodapé:
@@ -31,7 +31,7 @@ if (strpos($_SERVER['SERVER_NAME'], 'localhost') >= 0) :
     $hostname = 'localhost';    // Endereço do servidor MySQL:
     $username = 'root';         // Nome de usuário do MySQL: 
     $password = '';             // Senha do usuário do MySQL:
-    $database = 'phpincdb';     // Nome do bando de dados:
+    $database = 'phpincdb';     // Nome do banco de dados:
 
 // Se não estamos no XAMMP, estamos no provedor de hospedagem...
 else :
