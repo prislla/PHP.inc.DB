@@ -9,14 +9,13 @@ else                                        // Se definiu um título...
     $tag_title .= " ·:· " . $page_title;    // O título recebe o título definido:
 
 /**
- * Mensagem de 'Copyright'no rodapé:
+ * Processa mensagem de 'Copyright' → Tag <footer>...</footer>:
  **/
 $ytoday = intval(date('Y'));                // Obtém o ano atual:
 if ($ytoday > $site_year)                   // Se o ano atual é maior do que o ano do site...
     $copyright .= "{$ytoday} {$site_name}"; // Mostra o ano do site e o ano atual na mensagem:
 else                                        // Se o ano atual é o ano do site...
     $copyright .= $site_name;               // Mostra somente o ano do site na mensagem:
-
 
 ?>
 <!DOCTYPE html>
@@ -25,7 +24,8 @@ else                                        // Se o ano atual é o ano do site..
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/light.css" id="themeCSS">
     <title><?php echo $tag_title ?></title>
 </head>
 
@@ -34,10 +34,13 @@ else                                        // Se o ano atual é o ano do site..
     <div id="wrap">
 
         <header>
-            <h1 onclick="location.href='/'"><?php echo $site_name ?>
-        <span><?php echo $site_slogan ?></span></h1>
-            <img class= "logo" src="/img/logo.jpg">
-            
+            <h1 onclick="location.href='/'">
+                <?php echo $site_name ?>
+                <small><?php echo $site_slogan ?></small>
+            </h1>
+            <div id="theme" title="Trocar o tema">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
         </header>
 
         <nav>
@@ -48,12 +51,15 @@ else                                        // Se o ano atual é o ano do site..
 
         <main><?php echo $page_content ?></main>
 
-<footer>
-    <div><?php echo $copyright ?><br></div>
-    <small><a href="/policies">Políticas de privacidade</a></small>
-</footer>
+        <footer>
+            <div><?php echo $copyright ?><br></div>
+            <small><a href="/policies">Políticas de privacidade</a></small>
+        </footer>
 
-</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="/script.js"></script>
 
 </body>
 
